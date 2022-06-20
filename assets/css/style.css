@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #92a8d1;
+    --primary-color: #deeaee;
     --secondary-color: #034f84;
     --tertiary-color: #80ced6;
 }
@@ -13,6 +13,7 @@
   body {
     color: var(--secondary-color);
     font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--primary-color);
   }
 
   header {
@@ -23,8 +24,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     background-color: var(--secondary-color);
   }
@@ -48,15 +47,20 @@
     margin: 7px 0;
   }
 
-  header nav ul {
+  .me a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  header nav ul, .me div ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
   }
 
-    header nav ul li a {
+    header nav ul li a, .me div ul li {
     padding: 5px 6px 3px 6px;
     margin: 5px 9px 0 9px;
     font-weight: lighter;
@@ -64,7 +68,13 @@
     color: var(--tertiary-color);
     border-bottom: solid 3px var(--tertiary-color);
     justify-content: space-around;
+  }
 
+  .me div ul li {
+    color: var(--secondary-color);
+    border-bottom: solid 3px var(--secondary-color);
+    margin-top: 15px;
+    font-weight: bold;
   }
 
   header nav ul li a:hover {
@@ -93,4 +103,82 @@
     margin: 20px 20px;
     font-size: 50px;
     padding: 0 20px;
+  }
+
+  /* About me section */
+
+  .section, .me {
+    display: flex;
+    flex: 1 100%;
+  }
+
+  .section h1, .me h1 {
+    border-right: solid 3px;
+    align-items: flex-start;
+    text-align: right;
+    padding: 10px;
+    width: 25%;
+    font-size: 45px;
+    margin: 10px 0;
+  }
+
+  .me div {
+    width: 75%;
+    margin: 10px 50px 10px 30px;
+  }
+
+  .section .links {
+    width: 75%;
+    margin: 10px 50px 10px 30px;
+  }
+
+  .section .work-img-others {
+    width: 100%;
+  }
+
+  .section .work-img {
+    background-image: url("../images/beach-sunset.jpg");
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: solid 3px var(--tertiary-color);
+    width: 100%;
+    opacity: .5;
+  }
+
+  .section .small-img {
+    border: solid 3px var(--tertiary-color);
+    height: 200px;
+    width: 45%;
+    flex-wrap: wrap;
+    background-image: url("../images/LED-Wall-Benefits.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    position: relative;
+    opacity: .5
+  }
+  
+  .section .work-img div, .section .small-img div {
+    z-index: 999;
+    background-color: var(--tertiary-color);
+    margin: 15px 0;
+    width: fit-content;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .section .work-img div div, .section .small-img div div {
+    font-size: 13px;
+    padding: 5px 0 0 0;
+    margin: 0;
+    font-weight: 100;
+    opacity: 1;
+  }
+
+  .section .work-img:hover, .section .small-img:hover {
+    opacity: 1;
   }
