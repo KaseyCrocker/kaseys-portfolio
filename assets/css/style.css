@@ -46,6 +46,20 @@
   header nav {
     margin: 7px 0;
   }
+  
+  .section, .me {
+    display: flex;
+    flex: 1 100%;
+  }
+
+  .me {
+    align-items: center;
+  }
+
+  .me div {
+    width: 75%;
+    margin: 10px 50px 10px 30px;
+  }
 
   .me a {
     text-decoration: none;
@@ -73,7 +87,6 @@
   .me div ul li {
     color: var(--secondary-color);
     border-bottom: solid 3px var(--secondary-color);
-    margin-top: 15px;
     font-weight: bold;
   }
 
@@ -107,11 +120,6 @@
 
   /* About me section */
 
-  .section, .me {
-    display: flex;
-    flex: 1 100%;
-  }
-
   .section h1, .me h1 {
     border-right: solid 3px;
     align-items: flex-start;
@@ -122,21 +130,21 @@
     margin: 10px 0;
   }
 
-  .me div {
+  .links {
     width: 75%;
     margin: 10px 50px 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .section .links {
-    width: 75%;
-    margin: 10px 50px 10px 30px;
+  .work-img-others {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    justify-content: space-between;
   }
 
-  .section .work-img-others {
-    width: 100%;
-  }
-
-  .section .work-img {
+  .work-img {
     background-image: url("../images/beach-sunset.jpg");
     height: 400px;
     background-size: cover;
@@ -144,41 +152,83 @@
     border: solid 3px var(--tertiary-color);
     width: 100%;
     opacity: .5;
+    flex: 0 0 100%;
+    margin: 1% 0;
   }
 
-  .section .small-img {
+  .small-img {
     border: solid 3px var(--tertiary-color);
     height: 200px;
-    width: 45%;
+    flex: 0 0 49%;
     flex-wrap: wrap;
+    position: relative;
+    opacity: .5;
+    margin: 1% 0;
+  }
+
+  #led-wall {
     background-image: url("../images/LED-Wall-Benefits.png");
     background-size: cover;
     background-position: center;
-    justify-content: space-between;
-    margin: 10px 0;
-    position: relative;
-    opacity: .5
   }
   
-  .section .work-img div, .section .small-img div {
+  #calculator {
+    background-image: url("../images/coding-laptop.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pastel-puzzels {
+    background-image: url("../images/puzzles.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #run-buddy {
+    background-image: url("../images/run-buudy-screenshot.png");
+    background-size: cover;
+  }
+  
+  .work-img div, .small-img div {
     z-index: 999;
     background-color: var(--tertiary-color);
-    margin: 15px 0;
+    margin-top: 100px;
     width: fit-content;
     padding: 15px;
     font-size: 20px;
     font-weight: bold;
-    opacity: 1;
   }
 
-  .section .work-img div div, .section .small-img div div {
+  .work-img div {
+    margin-top: 300px;
+  }
+
+  .work-img div div, .small-img div div {
     font-size: 13px;
     padding: 5px 0 0 0;
     margin: 0;
     font-weight: 100;
-    opacity: 1;
   }
 
   .section .work-img:hover, .section .small-img:hover {
     opacity: 1;
+  }
+
+  @media screen and (max-width: 1040px) {
+
+    .section, .me {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section h1, .me h1 {
+      border-bottom: solid 3px;
+      text-align: center;
+      width: 95%;
+      border-right: none;
+    }
+
+    .me div {
+      text-align: center;
+    }
   }
