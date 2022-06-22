@@ -46,32 +46,13 @@
   header nav {
     margin: 7px 0;
   }
-  
-  .section, .me {
-    display: flex;
-    flex: 1 100%;
-  }
-
-  .me {
-    align-items: center;
-  }
-
-  .me div {
-    width: 75%;
-    margin: 10px 50px 10px 30px;
-  }
-
-  .me a {
-    text-decoration: none;
-    color: var(--secondary-color);
-  }
 
   header nav ul, .me div ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
     list-style: none;
+    justify-content: space-evenly;
   }
 
     header nav ul li a, .me div ul li {
@@ -81,7 +62,6 @@
     font-size: 1.55vw;
     color: var(--tertiary-color);
     border-bottom: solid 3px var(--tertiary-color);
-    justify-content: space-around;
   }
 
   .me div ul li {
@@ -129,14 +109,25 @@
     font-size: 45px;
     margin: 10px 0;
   }
-
-  .links {
-    width: 75%;
-    margin: 10px 50px 10px 30px;
+  
+  .section, .me {
     display: flex;
-    flex-wrap: wrap;
+    flex: 1 100%;
   }
 
+  .me {
+    align-items: center;
+  }
+
+  .me a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  .links, .me div {
+    width: 75%;
+    margin: 10px 50px 10px 30px;
+  }
   .work-img-others {
     display: flex;
     flex-wrap: wrap;
@@ -228,7 +219,42 @@
       border-right: none;
     }
 
-    .me div {
+    .links, .me div {
+      width: 75%;
+      margin: 10px 30px;
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 5px 0;
+      justify-content: center;
+      position: relative;
+    }
+
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header nav ul {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    header nav ul li a {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .links, .me div {
+      width: 90%;
+      margin: 10px 0;
+    }
+
+    .small-img {
+      flex: 0 0 100%;
     }
   }
