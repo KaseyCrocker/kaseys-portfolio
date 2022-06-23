@@ -21,27 +21,17 @@
     padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 10px;
-    padding-left: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 0;
     background-color: var(--secondary-color);
   }
 
   header h1 {
-    font-weight: bold;
     font-size: 36px;
-    color: var(--secondary-color);
     background-color: var(--tertiary-color);
-    margin: 0;
     padding-left: 40px;
     padding-right: 10px;
-  }
-
-  header a {
-    text-decoration: none;
-    color: var(--seconday-color);
   }
   
   header nav {
@@ -51,15 +41,13 @@
   header nav ul, .me div ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     list-style: none;
     justify-content: space-evenly;
   }
 
-    header nav ul li a, .me div ul li {
+  header nav ul li a, .me div ul li {
     padding: 5px 6px 3px 6px;
     margin: 5px 9px 0 9px;
-    font-weight: lighter;
     font-size: 1.55vw;
     color: var(--tertiary-color);
     border-bottom: solid 3px var(--tertiary-color);
@@ -79,20 +67,15 @@
 .hero {
   background-image: url("../images/andromeda.jpg");
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: right;
-  flex-wrap: wrap;
   align-items: flex-end;
-  background-attachment: absolute;
   background-position: 80%;
-  width: 100%;
   height: 300px;
   }
 
   .subtitle {
     background-color: var(--tertiary-color);
-    color: var(--secondary-color);
     margin: 20px 20px;
     font-size: 50px;
     padding: 0 20px;
@@ -102,7 +85,6 @@
 
   .section h1, .me h1 {
     border-right: solid 3px;
-    align-items: flex-start;
     text-align: right;
     padding: 10px;
     width: 25%;
@@ -112,7 +94,6 @@
   
   .section, .me {
     display: flex;
-    flex: 1 100%;
   }
 
   .me a {
@@ -154,9 +135,7 @@
     background-size: cover;
     background-position: center;
     border: solid 3px var(--tertiary-color);
-    width: 100%;
     opacity: .5;
-    flex: 0 0 100%;
     margin: 1% 0;
   }
 
@@ -194,7 +173,6 @@
   }
   
   .work-img div, .small-img div {
-    z-index: 999;
     background-color: var(--tertiary-color);
     margin-top: 100px;
     width: fit-content;
@@ -272,7 +250,7 @@
       margin: 10px 0;
     }
 
-    .small-img {
+    .work-img-others a {
       flex: 0 0 100%;
     }
   }
